@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="music-player">
+        <div class="player-header">
+            <h1><i class="fas fa-music"></i> Harmony Player</h1>
+        </div>
+        
+        <div class="album-art">
+            <img id="albumImage" src="" alt="Album Art">
+            <div class="vinyl-overlay"></div>
+        </div>
+        
+        <div class="track-info">
+            <h2 id="trackTitle">Select a song</h2>
+            <p id="trackArtist">Artist</p>
+        </div>
+        
+        <div class="progress-container">
+            <span id="currentTime">0:00</span>
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            <span id="duration">0:00</span>
+        </div>
+        
+        <div class="controls">
+            <button id="prevBtn" class="control-btn">
+                <i class="fas fa-step-backward"></i>
+            </button>
+            <button id="playBtn" class="control-btn play-pause">
+                <i class="fas fa-play"></i>
+            </button>
+            <button id="nextBtn" class="control-btn">
+                <i class="fas fa-step-forward"></i>
+            </button>
+        </div>
+        
+        <div class="volume-container">
+            <i class="fas fa-volume-up volume-icon"></i>
+            <div class="volume-bar">
+                <div id="volumeProgress" class="volume-progress"></div>
+            </div>
+        </div>
+        
+        <div class="playlist">
+            <h3>Playlist</h3>
+            <ul id="playlist">
+                <!-- Songs will be populated by JavaScript -->
+            </ul>
+        </div>
+    </div>
+    
+    <audio id="audioPlayer"></audio>
+    
+    <script src="songs.js"></script>
+    <script src="player.js"></script>
+</body>
+  </html>
